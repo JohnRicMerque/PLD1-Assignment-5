@@ -6,11 +6,15 @@ while True:
         try:
             gradeP = float(input("Enter Grade Percentage: "))
             gradeP = round(gradeP)
+            if gradeP not in range(65, 100):
+                print("Invalid. Input is out of range (65-100)") 
+                continue
         except ValueError:
             print("Invalid input. Please enter a Grade Percentage (e.g. 98)")
             continue
         else:
             break
+
 
 # conditions
 if gradeP >= 97 and gradeP <= 100:
@@ -35,4 +39,3 @@ elif gradeP >= 65 and gradeP <= 74:
     print("Grade/Mark: 5.00\nDescription: Failure")   
 else:
     print("Grade/Mark: Inc./W/D\nDescription: Incomplete/Withdrawn/Dropped")
-     
