@@ -5,6 +5,7 @@
 while True:
         try:
             gradeP = float(input("Enter Grade Percentage: "))
+            gradeP = round(gradeP)
         except ValueError:
             print("Invalid input. Please enter a Grade Percentage (e.g. 98)")
             continue
