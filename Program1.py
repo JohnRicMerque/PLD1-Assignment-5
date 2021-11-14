@@ -1,8 +1,17 @@
 # the program will ask for grade percentage 
 # then displays the equivalent Grade/Mark and Description
 
-gradeP = int(input("Enter Grade Percentage: "))
+# input validation
+while True:
+        try:
+            gradeP = float(input("Enter Grade Percentage: "))
+        except ValueError:
+            print("Invalid input. Please enter a Grade Percentage (e.g. 98)")
+            continue
+        else:
+            break
 
+# conditions
 if gradeP >= 97 and gradeP <= 100:
     print("Grade/Mark: 1.0\nDescription: Excellent")
 elif gradeP >= 94 and gradeP <= 96:
