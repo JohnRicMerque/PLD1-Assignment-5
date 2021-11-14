@@ -5,9 +5,9 @@
 def getNum():
     while True:
         try:
-            Num1 = int(input("Enter 1st number: "))
-            Num2 = int(input("Enter 2nd number: "))
-            Num3 = int(input("Enter 3rd number: "))
+            Num1 = float(input("Enter 1st number: "))
+            Num2 = float(input("Enter 2nd number: "))
+            Num3 = float(input("Enter 3rd number: "))
         except ValueError:
             print("Invalid Input. Please enter a number.")
             continue
@@ -28,4 +28,9 @@ def getLowestN(Num1, Num2, Num3):
 num_1, num_2, num_3 = getNum()
 lowestNumber = getLowestN(num_1, num_2, num_3)
 
-print(f"The lowest number is {lowestNumber}")
+# prints the lowest value as it is, removes the .0 in integers
+if lowestNumber.is_integer():
+    print(f"The lowest number is {int(lowestNumber)}.")
+else:
+    print(f"The lowest number is {float(lowestNumber)}.")
+    
